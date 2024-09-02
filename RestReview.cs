@@ -6,7 +6,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace RestaurantReviewApp
 {
-    public partial class Form1 : Form
+    public partial class RestReview : Form
     {
         public DataTable restTable = new DataTable(); // Data Table that holds the restaurants
         List<Restaurant> listRestaurant = new List<Restaurant>(); // List that holds the restaurants
@@ -168,7 +168,7 @@ namespace RestaurantReviewApp
                 {
                     print += keywords_[i] + "\n";
                 }
-
+                print.TrimEnd();
                 return print;
             }
             public string PrintKeywords()
@@ -197,7 +197,7 @@ namespace RestaurantReviewApp
 
         }
 
-        public Form1()
+        public RestReview()
         {
             InitializeComponent();
             mainRest.Show();
@@ -484,7 +484,6 @@ namespace RestaurantReviewApp
 
                     restTable.Rows.Add(addRow);
                     restTable.AcceptChanges();
-                    line = sr.ReadLine();
 
                 }
             }
@@ -540,7 +539,8 @@ namespace RestaurantReviewApp
                     sw.WriteLine(listRestaurant[i].menu_[j].GetDescription());
                     sw.WriteLine(listRestaurant[i].menu_[j].GetRating());
                     sw.WriteLine(listRestaurant[i].menu_[j].KeyWordCount());
-                    sw.WriteLine(listRestaurant[i].menu_[j].GetKeywords());
+                    if((listRestaurant[i].menu_[j].KeyWordCount()) > 0) 
+                        sw.WriteLine(listRestaurant[i].menu_[j].GetKeywords());
                 }
 
             }

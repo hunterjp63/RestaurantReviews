@@ -1,6 +1,6 @@
 ﻿namespace RestaurantReviewApp
 {
-    partial class Form1
+    partial class RestReview
     {
         /// <summary>
         ///  Required designer variable.
