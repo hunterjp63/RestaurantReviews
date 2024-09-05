@@ -318,11 +318,12 @@ namespace RestaurantReviewApp
         private void ViewRest_Click_1(object sender, EventArgs e)
         {
             // Selects the restaurant and moves panels
-            if (gridRest1.Rows.Count > 0)
+            if (gridRest2.Rows.Count > 0)
             {
                 int rowIndex = gridRest2.SelectedCells[0].RowIndex;
                 int colIndex = gridRest2.SelectedCells[0].ColumnIndex;
                 string restName = gridRest2.Rows[rowIndex].Cells[colIndex].Value.ToString();
+                selectedRestaurant = listRestaurant.Find(x => x.GetName() == (restName));
                 selectedRestaurant = listRestaurant.Find(x => x.GetName() == (restName));
                 gridFood2.DataSource = selectedRestaurant.foodTable_;
                 label3.Text = selectedRestaurant.GetName() + " Menu";
@@ -496,6 +497,7 @@ namespace RestaurantReviewApp
             // Assigns rest table to the grid and ensures other panels aren't visible
             gridRest1.DataSource = restTable;
             gridRest2.DataSource = restTable;
+            
             addWords.Visible = false;
             mainMenu.Visible = false;
             addRestPanel.Visible = false;
@@ -655,7 +657,7 @@ namespace RestaurantReviewApp
 
         private void gridRest2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gridRest1.Rows.Count > 0)
+            if (gridRest2.Rows.Count > 0)
             {
                 int rowIndex = gridRest2.SelectedCells[0].RowIndex;
                 int colIndex = gridRest2.SelectedCells[0].ColumnIndex;
