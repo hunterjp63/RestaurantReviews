@@ -164,11 +164,14 @@ namespace RestaurantReviewApp
             public string GetKeywords()
             {
                 string print = "";
-                for (int i = 0; i < keywords_.Count(); i++)
+                int i = 0;
+                while (i < keywords_.Count() - 1)
                 {
                     print += keywords_[i] + "\n";
+                    i++;
                 }
-                print.TrimEnd();
+                print += keywords_[i];
+
                 return print;
             }
             public string PrintKeywords()

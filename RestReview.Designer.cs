@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             FoodName = new TextBox();
             AddFood = new Button();
             FoodCost = new TextBox();
@@ -255,17 +255,17 @@
             // gridFood1
             // 
             gridFood1.BackgroundColor = Color.Honeydew;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.Honeydew;
-            dataGridViewCellStyle2.Font = new Font("Rockwell", 11F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = Color.DarkGreen;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            gridFood1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Honeydew;
+            dataGridViewCellStyle1.Font = new Font("Rockwell", 11F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = Color.DarkGreen;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            gridFood1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             gridFood1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridFood1.DefaultCellStyle = dataGridViewCellStyle2;
+            gridFood1.DefaultCellStyle = dataGridViewCellStyle1;
             gridFood1.EnableHeadersVisualStyles = false;
             gridFood1.Location = new Point(1155, 469);
             gridFood1.Name = "gridFood1";
@@ -275,6 +275,7 @@
             gridFood1.Size = new Size(652, 541);
             gridFood1.TabIndex = 9;
             gridFood1.CellDoubleClick += gridFood1_CellDoubleClick;
+            gridFood1.ReadOnly = true;
             // 
             // addRestPanel
             // 
@@ -323,13 +324,14 @@
             // 
             gridRest1.BackgroundColor = Color.Honeydew;
             gridRest1.BorderStyle = BorderStyle.None;
-            gridRest1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            gridRest1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             gridRest1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridRest1.DefaultCellStyle = dataGridViewCellStyle2;
+            gridRest1.DefaultCellStyle = dataGridViewCellStyle1;
             gridRest1.EnableHeadersVisualStyles = false;
             gridRest1.GridColor = SystemColors.ButtonShadow;
             gridRest1.Location = new Point(1155, 418);
             gridRest1.Name = "gridRest1";
+            gridRest1.ReadOnly = true;
             gridRest1.RowHeadersVisible = false;
             gridRest1.RowHeadersWidth = 62;
             gridRest1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -337,6 +339,7 @@
             gridRest1.Size = new Size(652, 732);
             gridRest1.TabIndex = 12;
             gridRest1.CellDoubleClick += gridRest1_CellDoubleClick;
+            gridRest1.ReadOnly = true;
             // 
             // EditRest
             // 
@@ -488,9 +491,9 @@
             // 
             gridFood2.AccessibleDescription = "";
             gridFood2.BackgroundColor = Color.Honeydew;
-            gridFood2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            gridFood2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             gridFood2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridFood2.DefaultCellStyle = dataGridViewCellStyle2;
+            gridFood2.DefaultCellStyle = dataGridViewCellStyle1;
             gridFood2.EnableHeadersVisualStyles = false;
             gridFood2.Location = new Point(1155, 181);
             gridFood2.Margin = new Padding(5);
@@ -501,6 +504,7 @@
             gridFood2.Size = new Size(652, 629);
             gridFood2.TabIndex = 10;
             gridFood2.CellDoubleClick += gridFood2_CellDoubleClick;
+            gridFood2.ReadOnly = true;
             // 
             // mainRest
             // 
@@ -571,9 +575,9 @@
             // gridRest2
             // 
             gridRest2.BackgroundColor = Color.Honeydew;
-            gridRest2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            gridRest2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             gridRest2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridRest2.DefaultCellStyle = dataGridViewCellStyle2;
+            gridRest2.DefaultCellStyle = dataGridViewCellStyle1;
             gridRest2.EnableHeadersVisualStyles = false;
             gridRest2.Location = new Point(1155, 181);
             gridRest2.Name = "gridRest2";
@@ -583,6 +587,7 @@
             gridRest2.Size = new Size(652, 747);
             gridRest2.TabIndex = 12;
             gridRest2.CellDoubleClick += gridRest2_CellDoubleClick;
+            gridRest2.ReadOnly = true;
             // 
             // ViewRest
             // 
